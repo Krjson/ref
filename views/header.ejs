@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My Node.js App</title>
+</head>
+<body>
+	<nav>
+		<a href="/">Главная страница</a>
+		<% if (session.isAuthenticated) { %>
+			<a href="/logout">Выход</a>
+		<% } else { %>
+			<a href="/login">Вход</a>
+			<a href="/register">Регистрация</a>
+		<% } %>
+	</nav>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Главная страница</title>
+</head>
+<body>
+    <%- include('./header.ejs') %>
+	<h1>Главная страница</h1>
+	<p>Добро пожаловать на главную страницу!</p>
+    <ul>
+        <li><a href="#">Menu Item 1</a></li>
+        <li><a href="#">Menu Item 2</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+        <li><a href="#">Menu Item 4</a></li>
+      </ul>
+      <p>Welcome, <%= session.user.email %>!</p>
+      <form action="/logout" method="post">
+        <input type="submit" value="Logout">
+      </form>
+</body>
+</html>
